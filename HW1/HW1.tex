@@ -1,0 +1,47 @@
+\documentclass[12pt]{article} 
+\author{Zhenzi Yu, zyu331}
+\title{HW1}
+
+
+\begin{document}
+\maketitle
+
+\section*{Question 1}
+
+$$S(p)=\frac{T(n,1)}{T(n,p)}=\frac{\frac{x}{k-m}}{\frac{x}{p*k-m}}=\frac{p*k-m}{k-m}>p$$
+\\
+\\The reason is that the snow accumulates with the time.
+
+\section*{Question 2}
+
+$$S(p)=\frac{T(n,1)}{T(n,p)}={1/p+1/n}$$
+\begin{itemize}
+\item fixed n, p continually increase: the speedup continually increases
+\item n is proportional to p: the speedup is fixed at 2k/n
+\end{itemize}
+
+\section*{Question 3}
+
+\begin{itemize}
+\item if $P<n^2$, then both algorithms do not lose efficiency. With $T_A=\frac{n^3}{P}\times log(n$ and $T_B=\frac{n^2}{p}\times n$, so B is always faster
+\item if $n^2<P<n^3$
+$T_B=n$ and $T_A=\frac{n^3}{p} \times log(n)$, so A is faser
+\item if $p>n^3$ $ T_A=log(n)$ and $T_B=n$
+
+\end{itemize}
+
+
+\section*{Question 4}
+(a) $E=\frac{n^2}{p (\frac{n^2}{p}+pn)}=\Theta(1)$ so: $p=O(\sqrt{n})$
+\\
+(b) to satisfy the memery requirement, $P~O(n)$, if $p=O(\sqrt[n])$ as the effciency requires, the memory tends to be exceeded.
+
+\section*{Question 5}
+$$E=\frac{n}{p (\frac{n}{p}+\sqrt{p} \log(p))}=\Theta(1)$$
+$$thus: p \sqrt{p} \log{p} =O(n)$$
+Guess $$P=O(\frac{n^\frac{2}{3}}{log n^\frac{2}{3}})$$
+Subsititute $$\frac{n^\frac{2}{3}}{\log n}^\frac{3}{2} \times (\log n^\frac{2}{3}- \log \log n^\frac{3}{2})=O(1)$$
+
+\end{document}
+
+
